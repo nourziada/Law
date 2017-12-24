@@ -131,9 +131,16 @@ Route::prefix('admin')->group(function(){
 
 Route::group(['prefix' => LaravelLocalization::setlocale()],function(){
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    /*
+    |--------------------------------------------------------------------------
+    | Show Index Page Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/','FrontEnd\HomeController@index')->name('show.index');
+    Route::get('/about','FrontEnd\HomeController@about')->name('show.about');
+    Route::get('/service/{id}','FrontEnd\HomeController@services')->name('show.services');
+    Route::get('/team','FrontEnd\HomeController@team')->name('show.team');
+    Route::get('/agents','FrontEnd\HomeController@agents')->name('show.agents');
 
 });
 

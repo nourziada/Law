@@ -1,0 +1,242 @@
+/*RTL*/
+
+body {
+    font-family: 'DroidArabicKufiRegular', Helvetica !important;
+}
+.case-evaluation-image img{
+    float: none;
+}
+.case-evaluation-image:before{
+    right: 200%;
+    left: auto;
+}
+.case-evaluation-image:hover:before{
+    right: 0;
+    left: auto;
+}
+.mainmenu .nav-holder > ul > li > ul > li > a{
+    display: inline-block;
+    text-align: right;
+    font-family: 'DroidArabicKufiRegular', Helvetica !important;
+    font-size: 11px;
+}
+.mainmenu .nav-holder > ul > li.dropdown > a:after{
+    margin-right: 10px;
+    margin-left: 0;
+}
+.mainmenu .nav-holder > ul > li > ul > li:before{
+    content: '\f104';
+    right: 20px;
+    left: auto;
+}
+.mainmenu .nav-holder > ul > li > a,
+.call-to-action-area .text-one h3 .number,
+#banner .caption-bold-heading h1,
+#banner .p-tag p,
+#banner .thm-btn a,
+#banner .slider-3 .caption-1 h1,
+#banner .slider-3 .caption-4 p,
+#banner .slider-3 .caption-2 h1,
+.call-to-action-area .text-two h4,
+.font-type,
+.quick-links ul li a{
+    font-family: 'DroidArabicKufiRegular', Helvetica !important;
+
+}
+.call-to-action-area .text-one h3{
+    font-size: 20px;
+    font-weight: normal;
+}
+.alignleft {
+    float: right;
+    margin-left: 15px;
+}
+.lawyer-text{
+    padding-right: 10px;
+    padding-left: 0;
+}
+.lawyer-count h1{
+    padding-right: 22px;
+    padding-left: 0;
+}
+.lawyer-count h1::before{
+    right: 77px;
+    left: auto;
+}
+.single-lawyer-info{
+    border-right: 0;
+    border-left: 1px solid #cccccc;
+}
+.testimonial-author h4{
+    padding: 5px;
+}
+.case-evaluation-form-title h1{
+    background: rgba(0, 0, 0, 0) url(../img/case-form-title-bg.png) no-repeat scroll right top;
+    padding-right: 53px;
+    padding-left: 0;
+}
+.legal-problem-text h2{
+    font-style: normal;
+}
+.quick-links ul li i{
+    padding-left: 12px;
+    padding-right: 0;
+}
+.widget-get-intouch ul li.location{
+    background: rgba(0, 0, 0, 0) url(../img/location.png) no-repeat scroll right 7px;
+}
+.widget-get-intouch ul li{
+    padding-right: 35px;
+    padding-left: 0;
+}
+.widget-get-intouch ul li.phone {
+    background: rgba(0, 0, 0, 0) url(../img/phone.png) no-repeat scroll right top;
+    background-position: right;
+}
+.widget-get-intouch ul li.envelop {
+    background: rgba(0, 0, 0, 0) url(../img/envelop.png) no-repeat scroll right top;
+    background-position: right;
+}
+.widget-get-intouch ul li.website {
+    background: rgba(0, 0, 0, 0) url(../img/website.png) no-repeat scroll right top;
+    background-position: right;
+}
+.quick-links ul.left-quick-links{
+    margin-left: 30px;
+    margin-right: 0;
+}
+.widget-social-links a i.mysocial_style{
+    padding-left: 0;
+    padding-right: 9px;
+}
+.single-footer-widget h3{
+    font-style: normal !important;
+}
+.breadcrumb-text ul.breadcrumbs li i{
+    padding-right: 12px;
+    padding-left: 5px;
+}
+.contact-form form button[type="submit"] .fa{
+    padding-left: 20px;
+    margin-right: 14px;
+    transform: rotate(180deg);
+    margin-left: 0;
+}
+.contact-form form textarea,
+.contact-form form input[type="text"]{
+    font-style: normal;
+    font-family: 'DroidArabicKufiRegular', Helvetica;
+}
+.single-law-box a i{
+    transform: rotate(180deg);
+    margin-top: 4px;
+    float: left;
+}
+.practice-law-box li a{
+    font-family: 'DroidArabicKufiRegular', Helvetica;;
+}
+#banner .thm-btn a i{
+    padding-left: 14px !important;
+    margin-right: 15px !important;
+    margin-left: 0 !important;
+    font-size: 14px;
+    transform: rotate(180deg);
+}
+.get-free-consultation-button a .fa{
+    transform: rotate(180deg);
+    padding-left: 15px;
+    margin-right: 20px;
+    margin-left: 0;
+}
+/*END RTL*/
+
+body{
+    color: #5f5e5e;
+}
+.mainmenu .nav-holder > ul > li > ul > li > a{
+    border: 0;
+}
+.mainmenu .nav-holder > ul > li > ul > li{
+    border-bottom: 1px solid #2A2A2A;
+}
+i.fa-fax{
+    font-size: 33px;
+    color: #fff;
+}
+.call-to-action-area .text-two h4{
+    font-style: normal;
+}
+.attorney-name h6{
+    color: #fff !important;
+}
+#welcome-area {
+    background: url(../img/texture.jpg) no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    overflow: hidden;
+}
+.footer-logo img{
+    height: 60px;
+}
+.quick-links ul li a {
+    font-size: 13px;
+}
+.m-t-15m{
+margin-top: -15px;
+}
+.mission-vision-text p{
+    font-size: 15px;
+}
+.our-team p{
+font-size: 16px;
+}
+.attorney-name{
+    background: #c6a561 none repeat scroll 0 0;
+}
+.attorney-name p{
+    color: #fff;
+}
+.social-links i.mysocial_style:hover {
+    background: #c6a561;
+}
+.client-container{
+    background-color:#C6A561;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+.client-container p{
+    color: #fff;
+    padding: 13px 0;
+    font-size: 13px;
+    margin: 0;
+}
+.contact-right i{
+    float: right;
+    font-size: 25px;
+    color: #b89b5e;
+    padding-left: 7px;
+}
+.contact-right a{
+    color: #7e7e7e;
+}
+.contact-right a:hover{
+    color: #b89b5e;
+}
+.contact-right i.fa-envelope{
+    line-height: 50px;
+}
+.contact-right-text{
+    padding: 20px;
+}
+.contact-form form textarea{
+    height: 243px;
+}
+.left-quick-links li{
+    width: 50%;
+    float: left;
+}
+.left-quick-links{
+    width: 100%;
+}
