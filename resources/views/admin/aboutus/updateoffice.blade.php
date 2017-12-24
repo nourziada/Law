@@ -15,14 +15,14 @@
                 <!--/End system bath-->
                 <div class="page_content">
 
-                    <h1 class="heading_title">بيانات قسم المقدمة | من نحن</h1>
+                    <h1 class="heading_title">نبذة عن المكتب | من نحن</h1>
 
 
                     @include('includes.errors')
 
 
                     <div class="form" >
-                        <form class="form-horizontal" action="{{route('update.admin.aboutus')}}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" action="{{route('update.admin.aboutus.office')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                             
 
@@ -30,7 +30,7 @@
                                 <label for="input2" class="col-sm-2 control-label bring_right left_text">المحتوى باللغة العربية</label>
                                 <div class="col-sm-10">
                                     
-                                    <textarea class="form-control" rows="8" id="input1" placeholder="المحتوى باللغة العربية" name="desc[ar]" required>{{unserialize($about->desc)['ar']}}</textarea>
+                                    <textarea class="form-control" rows="8" id="input1" placeholder="المحتوى باللغة العربية" name="desc[ar]" required>{{unserialize($aboutOffice->desc)['ar']}}</textarea>
 
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                 <label for="input2" class="col-sm-2 control-label bring_right left_text">Content in English</label>
                                 <div class="col-sm-10">
                                     
-                                    <textarea class="form-control" rows="8" id="input1" placeholder="Content in English" name="desc[en]" required>{{unserialize($about->desc)['en']}}</textarea>
+                                    <textarea class="form-control" rows="8" id="input1" placeholder="Content in English" name="desc[en]" required>{{unserialize($aboutOffice->desc)['en']}}</textarea>
 
                                 </div>
                             </div>

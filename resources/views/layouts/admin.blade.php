@@ -63,7 +63,7 @@
 
                
 
-                <p><a href="">تغيير كلمة المرور</a></p>
+                <p><a href="{{route('show.admin.password')}}">تغيير كلمة المرور</a></p>
 
                 <p><a href="{{route('logout')}}">تسجيل الخروج</a></p>
             </div>
@@ -142,7 +142,13 @@
 
                     <li class="{{ Request::is('admin/aboutus') ? 'active' : '' }}">
                         <span class="glyphicon glyphicon-grain"></span>
-                        <a href="{{route('show.admin.aboutus')}}">قسم من نحن</a>
+                        <div id="myDropdown">
+                            <a href="">قسم من نحن</a>
+                            <ul class="drop_main_menu">
+                                <li><a href="{{route('show.admin.aboutus')}}">قسم المقدمة</a></li>
+                                <li><a href="{{route('show.admin.aboutus.office')}}">قسم نبذة عن المكتب</a></li>
+                            </ul>
+                        </div>
                     </li>
 
 
@@ -178,26 +184,31 @@
                     </li>
 
 
-                    <li>
-                        <span class="glyphicon glyphicon-user"></span>
-                        <a href="">إدارة الاعضاء</a>
-                        <ul class="drop_main_menu">
-                            <li><a href="add_new_user.html">إضافة جديد</a></li>
-                            <li><a href="view_all_users.html">عرض الكل</a></li>
-                        </ul>
+                    <li class="{{ Request::is('admin/said') ? 'active' : '' }}">
+                        <span class="glyphicon glyphicon-comment"></span>
+                            <a href=""  class="dropdown-toggle" data-toggle="dropdown">قسم قالوا عنا</a>
+                            <ul class="drop_main_menu">
+                                <li><a href="{{route('said.create')}}">إضافة تقييم جديد</a></li>
+                                <li><a href="{{route('said.index')}}">عرض كل التقييمات</a></li>
+                            </ul>
                     </li>
-                    <li><span class="glyphicon glyphicon-edit"></span><a href="">المواضييع والمقالات</a>
-                        <ul class="drop_main_menu">
-                            <li><a href="add_new_topic.html">إضافة جديد</a></li>
-                            <li><a href="view_all_topics.html">عرض الكل</a></li>
-                        </ul>
+
+
+                    <li class="{{ Request::is('admin/statistic') ? 'active' : '' }}">
+                        <span class="glyphicon glyphicon-align-right"></span>
+                        <a href="{{route('show.admin.statistic')}}">إحصائيات</a>
                     </li>
-                    <li><span class="glyphicon glyphicon-picture"></span><a href="">البوم الصور</a>
-                        <ul class="drop_main_menu">
-                            <li><a href="add_new_photo.html">إضافة جديد</a></li>
-                            <li><a href="view_all_photos.html">عرض الكل</a></li>
-                        </ul>
+
+
+                    <li class="{{ Request::is('admin/setting') ? 'active' : '' }}">
+                        <span class="glyphicon glyphicon-cog"></span>
+                        <a href="{{route('show.admin.setting')}}">إعدادت الموقع</a>
                     </li>
+
+
+                    
+                   
+                    
                 </ul>
             </div>
         </div>

@@ -9,54 +9,47 @@
                     <ul>
                         <li class="bring_right"><span class="glyphicon glyphicon-home "></span></li>
                         <li class="bring_right"><a href="{{route('home')}}">الصفحة الرئيسية</a></li>
-                        <li class="bring_right"><a href="{{route('show.admin.aboutus')}}">قسم من نحن</a></li>
+                        <li class="bring_right"><a href="{{route('show.admin.password')}}">تحديث بيانات كلمة المرور</a></li>
                     </ul>
                 </div>
                 <!--/End system bath-->
                 <div class="page_content">
 
-                    <h1 class="heading_title">بيانات قسم المقدمة | من نحن</h1>
+                    <h1 class="heading_title">تحديث بيانات كلمة المرور</h1>
 
 
                     @include('includes.errors')
 
 
                     <div class="form" >
-                        <form class="form-horizontal" action="{{route('update.admin.aboutus')}}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" action="{{route('update.admin.password')}}" method="post">
                             {{csrf_field()}}
-                            
 
                             <div class="form-group">
-                                <label for="input2" class="col-sm-2 control-label bring_right left_text">المحتوى باللغة العربية</label>
+                                <label for="input0" class="col-sm-2 control-label bring_right left_text">كلمة المرور القديمة</label>
                                 <div class="col-sm-10">
-                                    
-                                    <textarea class="form-control" rows="8" id="input1" placeholder="المحتوى باللغة العربية" name="desc[ar]" required>{{unserialize($about->desc)['ar']}}</textarea>
-
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="input4" class="col-sm-2 control-label bring_right left_text">صورة القسم</label>
-                                <div class="col-sm-10">
-                                    <input type="file" class="form-control" style="height: unset;" name="image" id="input4">
-                                    <p>إذا كنت لا تريد تغيير الصورة ، فأتركها فارغة</p>
+                                    <input type="password" class="form-control" id="input0" name="old_password" placeholder="أدخل كلمة المرور القديمة" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="input2" class="col-sm-2 control-label bring_right left_text">Content in English</label>
+                                <label for="input2" class="col-sm-2 control-label bring_right left_text">كلمة المرور الجديدة</label>
                                 <div class="col-sm-10">
-                                    
-                                    <textarea class="form-control" rows="8" id="input1" placeholder="Content in English" name="desc[en]" required>{{unserialize($about->desc)['en']}}</textarea>
+                                    <input type="password" class="form-control" id="input2" name="password" placeholder="أدخل كلمة المرور الجديدة" required>
+                                </div>
+                            </div>
 
+                            <div class="form-group">
+                                <label for="input3" class="col-sm-2 control-label bring_right left_text">تأكيد كلمة المرور الجديدة</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="input3" name="password_confirmation" placeholder="أعد كتابة كلمة المرور الجديدة" required>
                                 </div>
                             </div>
 
 
                             <div class="form-group">
                                 <div class="col-sm-12 left_text">
-                                    <button type="submit" class="btn btn-success">تعديل البيانات</button>
+                                    <button type="submit" class="btn btn-success">تحديث كلمة المرور</button>
                                     <button type="reset" class="btn btn-default">مسح الحقول</button>
                                 </div>
                             </div>
@@ -65,5 +58,6 @@
                 </div>
             </div>
         </div>
+
 
 @stop

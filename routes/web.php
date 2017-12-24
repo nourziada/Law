@@ -57,6 +57,10 @@ Route::prefix('admin')->group(function(){
 
     Route::post('/aboutus/update','Admin\WebSiteContentController@updateAboutUs')->name('update.admin.aboutus');
 
+    Route::get('/aboutus/office','Admin\WebSiteContentController@showOfficeData')->name('show.admin.aboutus.office');
+
+    Route::post('/aboutus/update/office','Admin\WebSiteContentController@updateAboutUsOfficeData')->name('update.admin.aboutus.office');
+
     /*
     |--------------------------------------------------------------------------
     | Services Routes
@@ -78,7 +82,38 @@ Route::prefix('admin')->group(function(){
     */
     Route::resource('/parteners','Admin\PartenerController');
 
+    /*
+    |--------------------------------------------------------------------------
+    | Said Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::resource('/said','Admin\saidController');
 
+    /*
+    |--------------------------------------------------------------------------
+    | Statistics Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/statistic','Admin\StatisticController@index')->name('show.admin.statistic');
+
+    Route::post('/statistic/update','Admin\StatisticController@updateStatistic')->name('update.admin.statistic');
+
+    /*
+    |--------------------------------------------------------------------------
+    | Settings Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/setting','Admin\HomeController@showSetting')->name('show.admin.setting');
+
+    Route::post('/setting/update','Admin\HomeController@updateSetting')->name('update.admin.setting');
+
+    /*
+    |--------------------------------------------------------------------------
+    | Password Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/password' ,'Admin\HomeController@showPassword')->name('show.admin.password');
+    Route::post('/password/update' ,'Admin\HomeController@changePassword')->name('update.admin.password');
 
 
     /*

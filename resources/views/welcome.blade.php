@@ -81,7 +81,7 @@
                     {{trans('main.websiteName')}}
                 </div>
 
-                
+                <a href="{{route('test')}}">go test</a>
 
                 <div class="links">
                     @foreach(LaravelLocalization::getSupportedLocales() as $key => $value)

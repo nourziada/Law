@@ -47,4 +47,40 @@ class WebSiteContentController extends Controller
        	Session::flash('success', 'تمت تحديث المحتوى بنجاح');
         return redirect()->back();
     }
+
+    // Functions About Us Office Data
+
+    public function showOfficeData(){
+        $aboutOffice = WebSiteContent::where('title','aboutusOffice')->get()->first();
+
+        return view('admin.aboutus.updateoffice',compact('aboutOffice'));
+    }
+
+
+    public function updateAboutUsOfficeData(Request $request){
+        $this->validate($request,[
+                'desc' => 'required',
+                'image' => 'image', 
+            ],[  
+                'desc.required' => 'يجب أن تقوم بإدخال المحتوى رجاءً',
+                'image.image' => 'يجب أن تكون الصورة المرفوعة من نوع صورة',
+            ]);
+
+        $aboutOffice = WebSiteContent::where('title','aboutusOffice')->get()->first();
+
+        if($request->hasFile('image')){
+            $featured = $request->image;
+            $featured_new_name = time().$featured->getClientOriginalName();
+
+            $featured->move('uploads' , $featured_new_name);
+
+            $aboutOffice->image = '/uploads/' . $featured_new_name;
+        }
+
+        $aboutOffice->desc = serialize($request->desc);
+        $aboutOffice->save();
+
+        Session::flash('success', 'تمت تحديث المحتوى بنجاح');
+        return redirect()->back();
+    }
 }
