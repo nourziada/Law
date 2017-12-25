@@ -43,6 +43,32 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <label for="input2" class="col-sm-2 control-label bring_right left_text">تعديل أيقونة للخدمة</label>
+
+                                <div class="col-sm-10">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary iconpicker-component">
+                                            
+                                            <i class="fa fa-fw fa-heart"></i>
+                                        </button>
+
+                                        <button type="button" class="icp icp-dd btn btn-primary dropdown-toggle" data-selected="fa-car" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu"></div>
+                                    </div>
+                                </div>    
+
+                                <input type="hidden" id="icon" name="icon" value="">
+                            </div>
+                
+                        <div class="panel-footer" style="display: none;">
+                            <button class="btn btn-danger action-destroy">Destroy instances</button>
+                            <button class="btn btn-default action-create">Create instances</button>
+                        </div>
+
 
                             <div class="form-group">
                                 <label for="input4" class="col-sm-2 control-label bring_right left_text">صورة للخدمة</label>

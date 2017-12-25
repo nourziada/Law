@@ -10,10 +10,10 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="breadcrumb-text text-center">
-                                <h1 class="font-type">تواصل معنا</h1>
+                                <h1 class="font-type">{{trans('main.contactUs')}}</h1>
                                 <ul class="breadcrumbs">
-                                   <li><a class="font-type" href="{{route('show.index')}}">الرئيسية</a><i class="fa fa-angle-left"></i></li>
-                                   <li><a class="font-type" href="{{route('show.contact')}}">تواصل معنا</a></li>
+                                   <li><a class="font-type" href="{{route('show.index')}}">{{trans('main.home')}}</a><i class="fa fa-angle-left"></i></li>
+                                   <li><a class="font-type" href="{{route('show.contact')}}">{{trans('main.contactUs')}}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -29,23 +29,23 @@
                 <div class="row">
                     <div class="contact">
                         <div class="section-title text-center">
-                            <h2 class="font-type"><span>تواصل معنا</span></h2>
+                            <h2 class="font-type"><span>{{trans('main.contactUs')}}</span></h2>
                         </div>
-                        <p class="font-type text-center mb-30"> لا تتردد في الإتصال بنا لمعرفة ما يمكن أن يقدّم لكم مكتب المحامي محمد بن خليفة آل ثاني، محامون ومستشارون قانونيون</p>
+                        <p class="font-type text-center mb-30">{{trans('main.contactText')}}</p>
 
                         @include('includes.errors')
 
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                             <div class="contact-form">
-                                <form action="{{route('send.contact')}}" method="post" class="thm-contact-form" novalidate="novalidate">
+                                <form action="{{route('send.contact')}}" method="post" class="thm-contact-form">
                                 {{csrf_field()}}
                                 
-                                    <input name="name" type="text" placeholder="الاسم" class="valid" required>
+                                    <input name="name" type="text" placeholder="{{trans('main.fullName')}}" class="valid" required>
                                 
-                                    <input name="email" type="email" placeholder="البريد الالكتروني" required>
-                                    <input name="phone" type="number" placeholder="رقم الهاتف" required>
-                                    <textarea name="message" placeholder="الرسالة" required></textarea>
-                                    <button type="submit" class="font-type">ارسال <i class="fa fa-arrow-right"></i></button>
+                                    <input name="email" type="email" placeholder="{{trans('main.email')}}" required>
+                                    <input name="phone" type="number" placeholder="{{trans('main.phone')}}" required>
+                                    <textarea name="message" placeholder="{{trans('main.msg')}}" required></textarea>
+                                    <button type="submit" class="font-type">{{trans('main.submit')}} <i class="fa fa-arrow-right"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                                   </div>
                                     <div class="mt-15">
                                         <i class="fa fa-phone"></i>
-                                    <p class="font-type">هاتف : {{$settings->mobile1}}, {{$settings->mobile2}}</p>
+                                    <p class="font-type">{{trans('main.mobile')}} : {{$settings->mobile1}}, {{$settings->mobile2}}</p>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="mt-15">

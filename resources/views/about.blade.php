@@ -10,10 +10,10 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="breadcrumb-text text-center">
-                                <h1 class="font-type">من نحن</h1>
+                                <h1 class="font-type">{{trans('main.aboutus')}}</h1>
                                 <ul class="breadcrumbs">
-                                   <li><a class="font-type" href="{{route('show.index')}}">الرئيسية</a><i class="fa fa-angle-left"></i></li>
-                                   <li><a class="font-type" href="{{route('show.about')}}">من نحن</a></li>
+                                   <li><a class="font-type" href="{{route('show.index')}}">{{trans('main.home')}}</a><i class="fa fa-angle-left"></i></li>
+                                   <li><a class="font-type" href="{{route('show.about')}}">{{trans('main.aboutus')}}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                         <div class="mission-vision-text">
                             <div class="section-title mb-10">
-                                <h2 class="font-type"><span>المقدمة</span></h2>
+                                <h2 class="font-type"><span>{{trans('main.introduction')}}</span></h2>
                             </div>
                             <p class="text-justify font-type">
                             {{unserialize($aboutusFirst->desc)[LaravelLocalization::getCurrentLocale()]}}
@@ -56,7 +56,7 @@
                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                     	<div class="mission-vision-text">
                         	<div class="section-title mb-10">
-                        		<h2 class="font-type"><span>نبذة عن المكتب</span></h2>
+                        		<h2 class="font-type"><span>{{trans('main.aboutOffice')}}</span></h2>
                     		</div>
                             <p class="text-justify font-type">
                                {{unserialize($aboutusOffice->desc)[LaravelLocalization::getCurrentLocale()]}}
@@ -80,7 +80,7 @@
                                 	<i class="fa fa-home"></i>
                                 </div>
                                 <div class="featured-text">
-                                	<h4 class="font-type">قانون العائلة</h4>
+                                	<h4 class="font-type">{{trans('main.familyLaw')}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                 	<i class="fa fa-gavel"></i>
                                 </div>
                                 <div class="featured-text">
-                                	<h4 class="font-type">قانون جنائي</h4>
+                                	<h4 class="font-type">{{trans('main.Criminallaw')}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +104,7 @@
                                 	<i class="fa fa-road"></i>
                                 </div>
                                 <div class="featured-text">
-                                	<h4 class="font-type">قانون العمل</h4>
+                                	<h4 class="font-type">{{trans('main.worklaw')}}</h4>
                                 </div>
                             </div>
                         </div>

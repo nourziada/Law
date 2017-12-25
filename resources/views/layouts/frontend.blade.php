@@ -12,17 +12,17 @@
     <!--fonts-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
     <!-- Main stylesheet -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap-rtl.min.css')}}">
+    <link rel="stylesheet" href="{{url('/')}}/css/bootstrap-{{LaravelLocalization::getCurrentLocaleDirection()}}.min.css">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Responsive stylesheet -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     <!--costume css-->
-    <link rel="stylesheet" href="{{asset('css/costum.css')}}">
+    <link rel="stylesheet" href="{{url('/')}}/css/costum_{{LaravelLocalization::getCurrentLocale()}}.css">
     <link rel="stylesheet" href="{{asset('css/space.css')}}">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body dir="rtl">
+<body dir="{{LaravelLocalization::getCurrentLocaleDirection()}}">
 <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
         href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
@@ -38,10 +38,10 @@
         <nav class="mainmenu pull-left">
             <div class="nav-holder">
                 <ul>
-                    <li><a href="{{route('show.index')}}">الرئيسية</a></li>
-                    <li><a href="{{route('show.about')}}">من نحن</a></li>
+                    <li><a href="{{route('show.index')}}">{{trans('main.home')}}</a></li>
+                    <li><a href="{{route('show.about')}}">{{trans('main.aboutus')}}</a></li>
                     <li class="dropdown">
-                        <a href="##">خدماتنا</a>
+                        <a href="##">{{trans('main.services')}}</a>
                         <ul class="submenu">
 
                         @foreach($allServices as $serv)
@@ -49,9 +49,9 @@
                         @endforeach    
                         </ul>
                     </li>
-                    <li><a href="{{route('show.team')}}">فريقنا</a></li>
-                    <li><a href="{{route('show.agents')}}">عملائنا</a></li>
-                    <li><a href="{{route('show.contact')}}">تواصل معنا</a></li>
+                    <li><a href="{{route('show.team')}}">{{trans('main.team')}}</a></li>
+                    <li><a href="{{route('show.agents')}}">{{trans('main.clients')}}</a></li>
+                    <li><a href="{{route('show.contact')}}">{{trans('main.contactUs')}}</a></li>
 
                     <li>
                     @if(LaravelLocalization::getCurrentLocaleName() == 'Arabic')
@@ -107,7 +107,7 @@
                     </div>
 
                     <div class="footer-read-more">
-                        <a href="{{route('show.about')}}" class="font-type">اقرأ المزيد<i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></a>
+                        <a href="{{route('show.about')}}" class="font-type">{{trans('main.readMore')}}<i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></a>
                     </div>
                     <div class="widget-social-links">
                         <a href="{{$settings->facebook}}"><i class="fa fa-facebook mysocial_style"></i></a>
@@ -122,7 +122,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="single-footer-widget">
                     <div class="quick-links">
-                        <h3 class="font-type">روابط سريعة</h3>
+                        <h3 class="font-type">{{trans('main.Qlinks')}}</h3>
                         <ul class="left-quick-links alignleft">
 
                         @foreach($servicesFooter as $serv)
@@ -139,7 +139,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="single-footer-widget">
                     <div class="widget-get-intouch quick-links">
-                        <h3 class="font-type">كن على تواصل معنا</h3>
+                        <h3 class="font-type">{{trans('main.beConnected')}}</h3>
                         <ul>
                             <li class="location font-type">{{unserialize($settings->address)[LaravelLocalization::getCurrentLocale()]}}</li>
                             <li class="phone font-type">{{$settings->mobile1}}, {{$settings->mobile2}}</li>

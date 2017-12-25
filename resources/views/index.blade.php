@@ -54,7 +54,7 @@
                          data-start="2800"
                          data-easing="easeOutBack"
                     >
-                        <a href="{{$slider->link}}">شاهد الخدمة <i class="fa fa-arrow-right"></i></a>
+                        <a href="{{$slider->link}}">{{trans('main.viewService')}}<i class="fa fa-arrow-right"></i></a>
                     </div>
 
                 </li>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="dtc text-one">
                     <h3>
-                        الحصول على استشارة قانونية: 
+                        {{trans('main.getlocalAdvice')}}: 
 
                         {{$settings->mobile1}} , {{$settings->mobile2}}</h3>
                 </div>
@@ -84,7 +84,7 @@
                     <i class="fa fa-fax"></i>
                 </div>
                 <div class="dtc text-two">
-                    <h4>فاكس: {{$settings->fax}}</h4>
+                    <h4>{{trans('main.fax')}}: {{$settings->fax}}</h4>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
                 <div class="welcome-attorney">
                     <div class="section-title">
                         <h1 class="font-type"><span>
-                                        من نحن
+                                        {{trans('main.aboutus')}}
                                     </span></h1>
                     </div>
                     <div class="welcome-text">
@@ -109,7 +109,7 @@
 
                         </p>
                         <div class="our-law">
-                            <a href="{{route('show.about')}}">اقرأ المزيد</a>
+                            <a href="{{route('show.about')}}">{{trans('main.readMore')}}</a>
                         </div>
                     </div>
                 </div>
@@ -127,23 +127,23 @@
     <div class="container">
         <div class="featured-services">
             <div class="section-title text-center">
-                <h2 class="font-type"><span>خدماتنا</span></h2>
+                <h2 class="font-type"><span>{{trans('main.ourServices')}}</span></h2>
             </div>
             <div class="row">
                 <div class="top-featured">
 
                	@foreach($services as $serv)
                     <!--Star Single Featured Services-->
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding-top: 15px;">
                         <div class="single-featured">
                             <div class="single-featured-icon alignleft">
                                 <i class="fa {{$serv->icon}}"></i>
                             </div>
-                            <div class="single-featured-text">
+                            <div class="single-featured-text" style="height: 240px !important;">
                                 <h5 class="font-type">
                                 	{{unserialize($serv->title)[LaravelLocalization::getCurrentLocale()]}}
                                 </h5>
-                                <p class="font-type">{{str_limit(unserialize($serv->desc)[LaravelLocalization::getCurrentLocale()],340)}}</p>
+                                <p class="font-type">{{str_limit(unserialize($serv->desc)[LaravelLocalization::getCurrentLocale()],240)}}</p>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
         <div class="row">
             <div class="our-attorneys">
                 <div class="section-title text-center">
-                    <h2 class="font-type"><span>فريقنا</span></h2>
+                    <h2 class="font-type"><span>{{trans('main.ourTeam')}}</span></h2>
                 </div>
 
 
@@ -225,7 +225,7 @@
                                 {{$statistic->years}}</h1>
                         </div>
                         <div class="fix lawyer-text">
-                            <p class="font-type">سنوات <br>الخبرة</p>
+                            <p class="font-type">{{trans('main.years1')}} <br>{{trans('main.years2')}}</p>
                         </div>
                     </div>
                 </div>
@@ -238,7 +238,7 @@
                                {{$statistic->agents}} </h1>
                         </div>
                         <div class="fix lawyer-text">
-                            <p class="font-type">عملاء سعيدون بالتعامل معنا</p>
+                            <p class="font-type">{{trans('main.agents')}}</p>
                         </div>
                     </div>
                 </div>
@@ -251,7 +251,7 @@
                                 {{$statistic->success}}</h1>
                         </div>
                         <div class="fix lawyer-text">
-                            <p class="font-type">الحالات <br>الناجحة</p>
+                            <p class="font-type">{{trans('main.success')}}</p>
                         </div>
                     </div>
                 </div>
@@ -264,7 +264,7 @@
                                 {{$statistic->jobs}}</h1>
                         </div>
                         <div class="fix lawyer-text">
-                            <p class="font-type">وظائف<br> تمت</p>
+                            <p class="font-type">{{trans('main.jobs1')}} <br> {{trans('main.jobs2')}}</p>
                         </div>
                     </div>
                 </div>
@@ -367,30 +367,30 @@
             <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
                 <div class="case-evaluation-form">
                     <div class="case-evaluation-form-title">
-                        <h1 class="font-type">تواصل معنا</h1>
+                        <h1 class="font-type">{{trans('main.contactUs')}}</h1>
                     </div>
                     <form action="{{route('send.contact')}}" method="post">
                         {{csrf_field()}}
                         <div class="row">
 
                             <div class="col-lg-12">
-                                <input type="text" name="name" class="font-type" placeholder="الأسم كاملاً" required>
+                                <input type="text" name="name" class="font-type" placeholder="{{trans('main.fullName')}}" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="email" name="email" class="font-type" placeholder="البريد الالكتروني" required>
+                                <input type="email" name="email" class="font-type" placeholder="{{trans('main.email')}}" required>
                             </div>
                             <div class="col-lg-6">
-                                <input type="number" name="phone" class="font-type" placeholder="رقم الهاتف" required>
+                                <input type="number" name="phone" class="font-type" placeholder="{{trans('main.phone')}}" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <textarea class="font-type" name="message" placeholder="الرسالة" required></textarea>
+                                <textarea class="font-type" name="message" placeholder="{{trans('main.msg')}}" required></textarea>
                             </div>
                         </div>
-                        <button class="font-type" type="submit">ارسال</button>
+                        <button class="font-type" type="submit">{{trans('main.submit')}}</button>
                     </form>
                 </div>
             </div>
@@ -410,12 +410,12 @@
         <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                 <div class="legal-problem-text">
-                    <h2 class="font-type">إذا كان لديك أي مشكلة قانونية في حياتك ... نحن متاحون</h2>
+                    <h2 class="font-type">{{trans('main.weAvalibale')}}</h2>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="get-free-consultation-button">
-                    <a href="#" class="font-type">استشيرنا <i class="fa fa-arrow-right"></i></a>
+                    <a href="{{route('show.contact')}}" class="font-type">{{trans('main.consultation')}} <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

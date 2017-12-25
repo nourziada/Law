@@ -87,7 +87,7 @@ Route::prefix('admin')->group(function(){
     | Said Routes
     |--------------------------------------------------------------------------
     */
-    Route::resource('/said','Admin\saidController');
+    Route::resource('/said','Admin\SaidController');
 
     /*
     |--------------------------------------------------------------------------

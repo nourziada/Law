@@ -1,0 +1,169 @@
+/*RTL*/
+
+
+@media only screen and (min-width : 768px) {
+    .stricky .pull-right{
+        float: left !important;
+    }
+    .stricky .pull-left{
+        float: right !important;
+    }
+}
+.call-to-action-area .icon-box{
+    border-right: 0;
+}
+.mainmenu .nav-holder > ul > li > ul > li > a{
+    display: inline-block;
+}
+.mainmenu .nav-holder > ul > li > ul{
+    width: 400px;
+    left: -150px;
+}
+.mainmenu .nav-holder > ul > li > ul > li{
+    text-align: left;
+}
+body{
+    color: #5f5e5e;
+}
+.mainmenu .nav-holder > ul > li > ul > li > a{
+    border: 0;
+}
+.mainmenu .nav-holder > ul > li > ul > li{
+    border-bottom: 1px solid #2A2A2A;
+}
+i.fa-fax{
+    font-size: 33px;
+    color: #fff;
+}
+.call-to-action-area .text-two h4{
+    font-style: normal;
+}
+.attorney-name h6{
+    color: #fff !important;
+}
+#welcome-area {
+    background: url(../img/texture.jpg) no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    overflow: hidden;
+}
+.footer-logo img{
+    height: 60px;
+}
+.quick-links ul li a {
+    font-size: 13px;
+    max-width: 89%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.m-t-15m{
+margin-top: -15px;
+}
+.mission-vision-text p{
+    font-size: 15px;
+}
+.our-team p{
+font-size: 16px;
+}
+.attorney-name{
+    background: #c6a561 none repeat scroll 0 0;
+}
+.attorney-name p{
+    color: #fff;
+}
+.social-links i.mysocial_style:hover {
+    background: #c6a561;
+}
+.client-container{
+    background-color:#C6A561;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+.client-container p{
+    color: #fff;
+    padding: 13px 0;
+    font-size: 13px;
+    margin: 0;
+}
+.contact-right i{
+    float: left;
+    font-size: 25px;
+    color: #b89b5e;
+    padding-right: 7px;
+}
+.contact-right a{
+    color: #7e7e7e;
+}
+.contact-right a:hover{
+    color: #b89b5e;
+}
+.contact-right i.fa-envelope{
+    line-height: 50px;
+}
+.contact-right-text{
+    padding: 20px;
+}
+.contact-form form textarea{
+    height: 243px;
+}
+.left-quick-links li{
+    width: 50%;
+    float: right;
+}
+.left-quick-links{
+    width: 100%;
+}
+.tp-caption{
+    white-space: normal !important;
+}
+#banner .p-tag p{
+    width: 80%;
+    margin: 0 auto !important;
+}
+.testimonial-image-holder img{
+    border-radius: 50%;
+}
+.quick-links ul li i{
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    padding-left: 12px;
+    padding-right: 0;
+    position: relative;
+    top:-4px;
+}
+.footer-read-more i{
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.breadcrumb-text ul.breadcrumbs li i{
+    padding-right: 12px;
+    padding-left: 5px;
+    transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+}
+.single-law-box a{
+    max-width: 96%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.single-law-box a i{
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+
+}
+.single-law-box{
+    position: relative;
+}

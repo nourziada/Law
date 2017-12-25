@@ -10,10 +10,10 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="breadcrumb-text text-center">
-                                <h1 class="font-type">عملائنا</h1>
+                                <h1 class="font-type">{{trans('main.clients')}}</h1>
                                 <ul class="breadcrumbs">
-                                   <li><a class="font-type" href="{{route('show.index')}}">الرئيسية</a><i class="fa fa-angle-left"></i></li>
-                                   <li><a class="font-type" href="{{route('show.agents')}}">عملائنا</a></li>
+                                   <li><a class="font-type" href="{{route('show.index')}}">{{trans('main.home')}}</a><i class="fa fa-angle-left"></i></li>
+                                   <li><a class="font-type" href="{{route('show.agents')}}">{{trans('main.clients')}}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
         <section id="mission-vision-area">
         	<div class="container">
                 <div class="section-title text-center mb-0">
-                    <h2 class="font-type"><span>بعض عملائنا</span></h2>
+                    <h2 class="font-type"><span>{{trans('main.someClients')}}</span></h2>
                 </div>
                 <div class="row">
 

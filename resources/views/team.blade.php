@@ -10,10 +10,10 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="breadcrumb-text text-center">
-                        <h1 class="font-type">فريقنا</h1>
+                        <h1 class="font-type">{{trans('main.ourTeam')}}</h1>
                         <ul class="breadcrumbs">
-                            <li><a class="font-type" href="{{route('show.index')}}">الرئيسية</a><i class="fa fa-angle-left"></i></li>
-                            <li><a class="font-type" href="{{route('show.team')}}">فريقنا</a></li>
+                            <li><a class="font-type" href="{{route('show.index')}}">{{trans('main.home')}}</a><i class="fa fa-angle-left"></i></li>
+                            <li><a class="font-type" href="{{route('show.team')}}">{{trans('main.team')}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="our-attorneys">
                 <div class="section-title text-center">
-                    <h2 class="font-type"><span>فريقنا</span></h2>
+                    <h2 class="font-type"><span>{{trans('main.ourTeam')}}</span></h2>
                 </div>
 
             @foreach($teams as $team)    

@@ -12,8 +12,8 @@
                             <div class="breadcrumb-text text-center">
                                 <h1 class="font-type">{{unserialize($service->title)[LaravelLocalization::getCurrentLocale()]}}</h1>
                                 <ul class="breadcrumbs">
-                                   <li><a class="font-type" href="{{route('show.index')}}">الرئيسية</a><i class="fa fa-angle-left"></i></li>
-                                   <li><a class="font-type" href="{{route('show.services',['id' => $service->id])}}">خدماتنا</a></li>
+                                   <li><a class="font-type" href="{{route('show.index')}}">{{trans('main.home')}}</a><i class="fa fa-angle-left"></i></li>
+                                   <li><a class="font-type" href="{{route('show.services',['id' => $service->id])}}">{{trans('main.services')}}</a></li>
                                 </ul>
                             </div>
                         </div>
