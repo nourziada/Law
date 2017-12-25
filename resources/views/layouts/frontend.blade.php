@@ -51,7 +51,7 @@
                     </li>
                     <li><a href="{{route('show.team')}}">فريقنا</a></li>
                     <li><a href="{{route('show.agents')}}">عملائنا</a></li>
-                    <li><a href="contact.php">تواصل معنا</a></li>
+                    <li><a href="{{route('show.contact')}}">تواصل معنا</a></li>
 
                     <li>
                     @if(LaravelLocalization::getCurrentLocaleName() == 'Arabic')

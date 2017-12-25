@@ -16,22 +16,24 @@
                     <div class="page_content">
                         <div class="quick_links text-center">
                             <h1 class="heading_title">الوصول السريع</h1>
-                            <a href="#" style="background-color: #c0392b">
+                            <a href="{{route('show.index')}}" target="_blank" style="background-color: #c0392b">
                                 <h4>استعراض الموقع</h4>
                             </a>
-                            <a href="options.html" style="background-color: #2980b9">
-                                <h4>تعديل البيانات</h4>
+                            <a href="{{route('services.create')}}" style="background-color: #2980b9">
+                                <h4>إضافة خدمة جديدة</h4>
                             </a>
-                            <a href="view_all_users.html" style="background-color: #8e44ad">
-                                <h4>عرض الاعضاء</h4>
+                            <a href="{{route('team.create')}}" style="background-color: #8e44ad">
+                                <h4>إضافة عضو لفريقنا</h4>
                             </a>
-                            <a href="add_new_topic.html" style="background-color: #d35400">
-                                <h4>إضافة موضوع</h4>
+                            <a href="{{route('parteners.create')}}" style="background-color: #d35400">
+                                <h4>إضافة عميل جديد</h4>
                             </a>
-                            <a href="add_new_photo.html" style="background-color: #2c3e50">
-                                <h4>إضافة صورة</h4>
+                            <a href="{{route('show.admin.setting')}}" style="background-color: #2c3e50">
+                                <h4>إعدادت الموقع</h4>
                             </a>
                         </div>
+
+                        <!--
                         <div class="home_statics text-center">
                             <h1 class="heading_title">احصائيات عامة للموقع</h1>
 
@@ -72,6 +74,8 @@
                                 <p class="h4">55</p>
                             </div>
                         </div>
+
+                        -->
                     </div>
                 </div>
             </div>

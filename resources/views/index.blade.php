@@ -369,29 +369,29 @@
                     <div class="case-evaluation-form-title">
                         <h1 class="font-type">تواصل معنا</h1>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <input type="text" class="font-type" placeholder="الأسم الأول">
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="text" class="font-type" placeholder="الأسم الأخير">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <input type="text" class="font-type" placeholder="البريد الالكتروني">
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="text" class="font-type" placeholder="رقم الهاتف">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <textarea class="font-type" placeholder="الرسالة"></textarea>
-                        </div>
-                    </div>
-                    <button class="font-type" type="submit">ارسال</button>
+                    <form action="{{route('send.contact')}}" method="post">
+                        {{csrf_field()}}
+                        <div class="row">
 
+                            <div class="col-lg-12">
+                                <input type="text" name="name" class="font-type" placeholder="الأسم كاملاً" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="email" name="email" class="font-type" placeholder="البريد الالكتروني" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="number" name="phone" class="font-type" placeholder="رقم الهاتف" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <textarea class="font-type" name="message" placeholder="الرسالة" required></textarea>
+                            </div>
+                        </div>
+                        <button class="font-type" type="submit">ارسال</button>
+                    </form>
                 </div>
             </div>
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">

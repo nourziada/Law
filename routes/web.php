@@ -141,6 +141,8 @@ Route::group(['prefix' => LaravelLocalization::setlocale()],function(){
     Route::get('/service/{id}','FrontEnd\HomeController@services')->name('show.services');
     Route::get('/team','FrontEnd\HomeController@team')->name('show.team');
     Route::get('/agents','FrontEnd\HomeController@agents')->name('show.agents');
+    Route::get('/contact','FrontEnd\HomeController@contactPage')->name('show.contact');
+    Route::post('/contact/send','FrontEnd\HomeController@sendEmail')->name('send.contact');
 
 });
 

@@ -9,8 +9,11 @@ use App\Services;
 use App\Slider;
 use App\Statistic;
 use App\Team;
+use App\User;
 use App\WebSiteContent;
 use Illuminate\Http\Request;
+use Notification;
+use Session;
 
 class HomeController extends Controller
 {
@@ -61,5 +64,42 @@ class HomeController extends Controller
     	$agents = Partener::all();
 
     	return view('agents',compact('agents'));
+    }
+
+    public function contactPage(){
+        return view('contact');
+    }
+
+    public function sendEmail(Request $request){
+        $this->validate($request,[
+                'name' => 'required',
+                'email' => 'required|email',
+                'phone' => 'required',
+                'message' => 'required',
+            ],[
+                'name.required' => 'يرجى إضافة الاسم كاملاً',
+                'email.required' => 'يرجى أن تقوم بإدخال البريد الالكتروني',
+                'email.email' => 'يرجى أن تقوم بإدخال البريد الالكتروني بشكل صحيح',
+                'phone.required' => 'يرجى أن تقوم بإضفة رقم للتواصل',
+                'message.required' => 'يرجى أن تقوم بإدخال الرسالة', 
+            ]);
+
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
+        $message = $request->message;
+
+        
+        $users = array();
+
+        // You Must change the user Email
+
+        array_push($users, User::find(1));
+
+        Notification::send($users,new \App\Notifications\ContactUs($name,$email,$phone,$message));
+
+
+        Session::flash('success', 'تم ارسال رسالتك بنجاح');
+        return redirect()->back();
     }
 }
