@@ -70,7 +70,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1098398.518120236!2d51.051663049883665!3d25.271718594510556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2s!4v1514040607821" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.655553230978!2d51.50377368498869!3d25.28216998385669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE2JzU1LjgiTiA1McKwMzAnMDUuNyJF!5e0!3m2!1sar!2sqa!4v1514976155433" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>

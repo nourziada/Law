@@ -129,7 +129,13 @@ class ServicesController extends Controller
         
         $service->title = serialize($request->title);
         $service->desc = serialize($request->desc);
-        $service->icon = $request->icon;
+
+        if($request->icon == null) {
+            $service->icon = $request->old_icon;
+        }else{
+            $service->icon = $request->icon;
+        }
+        
         $service->save();
 
         Session::flash('success', 'تم تحديث بيانات الخدمة بنجاح');

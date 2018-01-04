@@ -68,6 +68,23 @@
 
 
                             <div class="form-group">
+                                <label for="input0" class="col-sm-2 control-label bring_right left_text">Full Name(French)</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input0" name="name[fr]" placeholder="Full Name for Team Member in French" value="{{unserialize($name)['fr']}}" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="input2" class="col-sm-2 control-label bring_right left_text">Rating(French)</label>
+                                <div class="col-sm-10">
+                                    
+                                    <textarea class="form-control" rows="8" id="input1" placeholder="Enter Member Description here in French" name="desc[fr]" required>{{unserialize($desc)['fr']}}</textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
                                 <div class="col-sm-12 left_text">
                                     <button type="submit" class="btn btn-success">تحديث بيانات التقييم</button>
                                     <button type="reset" class="btn btn-default">مسح الحقول</button>

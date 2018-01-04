@@ -46,6 +46,13 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="input0" class="col-sm-4 control-label bring_right left_text">Address English(French)</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="input0" name="address[fr]" value="{{unserialize($setting->address)['fr']}}" placeholder="Enter the Office Address in French" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="input2" class="col-sm-4 control-label bring_right left_text">رقم الموبايل الأول</label>
                                 <div class="col-sm-8">
                                     <input type="number" class="form-control" id="input2" name="mobile1" value="{{$setting->mobile1}}" placeholder="أدخل رقم الموبايل الأول" required>

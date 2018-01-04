@@ -26,8 +26,9 @@
                         <table class="table table-bordered">
                             <tr>
                                 <td>#</td>
-                                <td style="width: 50% !important;">اسم العميل (العربية)</td>
+                                <td style="width: 30% !important;">اسم العميل (العربية)</td>
                                 <td>اسم العميل (English)</td>
+                                <td>اسم العميل (French)</td>
                                 <td>التحكم</td>
                             </tr>
 
@@ -40,19 +41,19 @@
                                 <td>{{ unserialize($part->name)['ar']}}</td>
 
                                 <td>{{ unserialize($part->name)['en']}}</td>
+                                <td>{{ unserialize($part->name)['fr']}}</td>
                                
                                 <td>
                                     
                                     <a href="{{route('parteners.edit',['id' => $part->id])}}" class="btn btn-info btn-xs" data-title="Edit"><span class="glyphicon glyphicon-pencil"></span></a> 
                                    
-                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal" ><span class="glyphicon glyphicon-trash"></span>
-                                    <input type="hidden" value="{{$deletedid = $part->id}}">
+                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal{{$part->id}}" ><span class="glyphicon glyphicon-trash"></span>
                                     </button> 
                                 </td>
                             </tr>
-                            @endforeach
+
                             <!-- Modal -->
-                            <div id="deleteModal" class="modal fade" role="dialog">
+                            <div id="deleteModal{{$part->id}}" class="modal fade" role="dialog">
                               <div class="modal-dialog">
 
                                 <!-- Modal content-->
@@ -67,7 +68,7 @@
                                   <div class="modal-footer">
 
                                   <span>
-                                     <form action="{{route('parteners.destroy',['id' => $deletedid])}}" method="post">
+                                     <form action="{{route('parteners.destroy',['id' => $part->id])}}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button class="btn btn-danger" type="submit">حذف</button>
@@ -79,6 +80,8 @@
 
                               </div>
                             </div>
+                            @endforeach
+                            
                         @else
 
                         @endif

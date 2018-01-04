@@ -91,7 +91,6 @@ class HomeController extends Controller
 
         
         $users = array();
-
         // You Must change the user Email
 
         array_push($users, User::find(1));

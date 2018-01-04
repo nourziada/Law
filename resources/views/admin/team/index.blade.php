@@ -29,6 +29,7 @@
                                 <td>الصورة</td>
                                 <td>الاسم كاملاً (العربية)</td>
                                 <td>الاسم كاملاً(English)</td>
+                                <td>الاسم كاملاً(French)</td>
                                 <td>التحكم</td>
                             </tr>
 
@@ -42,19 +43,19 @@
                                 <td>{{ unserialize($team->name)['ar']}}</td>
 
                                 <td>{{ unserialize($team->name)['en']}}</td>
+                                <td>{{ unserialize($team->name)['fr']}}</td>
                                
                                 <td>
                                     
                                     <a href="{{route('team.edit',['id' => $team->id])}}" class="btn btn-info btn-xs" data-title="Edit"><span class="glyphicon glyphicon-pencil"></span></a> 
                                    
-                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal" ><span class="glyphicon glyphicon-trash"></span>
-                                    <input type="hidden" value="{{$deletedid = $team->id}}">
+                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal{{$team->id}}" ><span class="glyphicon glyphicon-trash"></span>
                                     </button> 
                                 </td>
                             </tr>
-                            @endforeach
+
                             <!-- Modal -->
-                            <div id="deleteModal" class="modal fade" role="dialog">
+                            <div id="deleteModal{{$team->id}}" class="modal fade" role="dialog">
                               <div class="modal-dialog">
 
                                 <!-- Modal content-->
@@ -69,7 +70,7 @@
                                   <div class="modal-footer">
 
                                   <span>
-                                     <form action="{{route('team.destroy',['id' => $deletedid])}}" method="post">
+                                     <form action="{{route('team.destroy',['id' => $team->id])}}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button class="btn btn-danger" type="submit">حذف</button>
@@ -81,6 +82,9 @@
 
                               </div>
                             </div>
+
+                            @endforeach
+                            
                         @else
 
                         @endif

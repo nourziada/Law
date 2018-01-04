@@ -29,6 +29,7 @@
                                 <td>الصورة</td>
                                 <td>عنوان الخدمة (العربية)</td>
                                 <td>عنوان الخدمة (English)</td>
+                                <td>عنوان الخدمة (French)</td>
                                 <td>التحكم</td>
                             </tr>
 
@@ -42,19 +43,19 @@
                                 <td>{{ unserialize($serv->title)['ar']}}</td>
 
                                 <td>{{ unserialize($serv->title)['en']}}</td>
+                                <td>{{ unserialize($serv->title)['fr']}}</td>
                                
                                 <td>
                                     
                                     <a href="{{route('services.edit',['id' => $serv->id])}}" class="btn btn-info btn-xs" data-title="Edit"><span class="glyphicon glyphicon-pencil"></span></a> 
                                    
-                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal" ><span class="glyphicon glyphicon-trash"></span>
-                                    <input type="hidden" value="{{$deletedid = $serv->id}}">
+                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal{{$serv->id}}" ><span class="glyphicon glyphicon-trash"></span>
                                     </button> 
                                 </td>
                             </tr>
-                            @endforeach
-                            <!-- Modal -->
-                            <div id="deleteModal" class="modal fade" role="dialog">
+
+                             <!-- Modal -->
+                            <div id="deleteModal{{$serv->id}}" class="modal fade" role="dialog">
                               <div class="modal-dialog">
 
                                 <!-- Modal content-->
@@ -69,7 +70,7 @@
                                   <div class="modal-footer">
 
                                   <span>
-                                     <form action="{{route('services.destroy',['id' => $deletedid])}}" method="post">
+                                     <form action="{{route('services.destroy',['id' => $serv->id])}}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button class="btn btn-danger" type="submit">حذف</button>
@@ -81,6 +82,9 @@
 
                               </div>
                             </div>
+
+                            @endforeach
+                           
                         @else
 
                         @endif

@@ -42,6 +42,13 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="input0" class="col-sm-2 control-label bring_right left_text">Partener Name(French)</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input0" name="name[fr]" placeholder="Partener Name in French" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <div class="col-sm-12 left_text">
                                     <button type="submit" class="btn btn-success">إضافة عميل جديد</button>
                                     <button type="reset" class="btn btn-default">مسح الحقول</button>

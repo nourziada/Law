@@ -53,16 +53,21 @@
                                             <i class="fa fa-fw fa-heart"></i>
                                         </button>
 
-                                        <button type="button" class="icp icp-dd btn btn-primary dropdown-toggle" data-selected="fa-car" data-toggle="dropdown">
+                                        <button type="button" class="icp icp-dd btn btn-primary dropdown-toggle" data-selected="{{$icon}}" data-toggle="dropdown">
                                             <span class="caret"></span>
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <div class="dropdown-menu"></div>
                                     </div>
-                                </div>    
+                                    <p style="color: red;">إذا كنت لا تريد تغيير الأيقونة أتركها كما هي</p> 
+                                </div>  
+
+
 
                                 <input type="hidden" id="icon" name="icon" value="">
                             </div>
+
+                            <input type="hidden" name="old_icon" value="{{$icon}}">
                 
                         <div class="panel-footer" style="display: none;">
                             <button class="btn btn-danger action-destroy">Destroy instances</button>
@@ -92,6 +97,22 @@
                                 <div class="col-sm-10">
 
                                     <textarea class="form-control" rows="8" id="input1" placeholder="Enter Service Description here in English" name="desc[en]" required>{{unserialize($desc)['en']}}</textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="input0" class="col-sm-2 control-label bring_right left_text">Service Title(French)</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input0" name="title[fr]" value="{{unserialize($title)['fr']}}" placeholder="Enter Service Title here in French " required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input2" class="col-sm-2 control-label bring_right left_text">Service Description(French)</label>
+                                <div class="col-sm-10">
+
+                                    <textarea class="form-control" rows="8" id="input1" placeholder="Enter Service Description here in French" name="desc[fr]" required>{{unserialize($desc)['fr']}}</textarea>
                                 </div>
                             </div>
 

@@ -27,6 +27,7 @@
                                 <td>الصورة</td>
                                 <td>عنوان الشريحة (العربية)</td>
                                 <td>عنوان الشريحة (English)</td>
+                                <td>عنوان الشريحة (French)</td>
                                 <td>التحكم</td>
                             </tr>
 
@@ -39,21 +40,19 @@
                                 <td>{{ unserialize($slider->title)['ar']}}</td>
 
                                 <td>{{ unserialize($slider->title)['en']}}</td>
+                                <td>{{ unserialize($slider->title)['fr']}}</td>
                                
                                 <td>
                                     
                                     <a href="{{route('slider.edit',['id' => $slider->id])}}" class="btn btn-info btn-xs" data-title="Edit"><span class="glyphicon glyphicon-pencil"></span></a> 
                                    
-                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal" ><span class="glyphicon glyphicon-trash"></span>
-                                    <input type="hidden" value="{{$deletedid = $slider->id}}">
+                                    <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#deleteModal{{$slider->id}}" ><span class="glyphicon glyphicon-trash"></span>
                                     </button> 
                                 </td>
                             </tr>
-                            @endforeach
-
 
                             <!-- Modal -->
-                            <div id="deleteModal" class="modal fade" role="dialog">
+                            <div id="deleteModal{{$slider->id}}" class="modal fade" role="dialog">
                               <div class="modal-dialog">
 
                                 <!-- Modal content-->
@@ -68,7 +67,7 @@
                                   <div class="modal-footer">
 
                                   <span>
-                                     <form action="{{route('slider.destroy',['id' => $deletedid])}}" method="post">
+                                     <form action="{{route('slider.destroy',['id' => $slider->id])}}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button class="btn btn-danger" type="submit">حذف</button>
@@ -80,6 +79,11 @@
 
                               </div>
                             </div>
+
+                            @endforeach
+
+
+                            
                         @else
 
                         @endif

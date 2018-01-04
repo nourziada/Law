@@ -215,6 +215,60 @@
             </div>
         </div>
         <!--Start Lawyer Info-->
+        
+        <!--Start Lawyer Info-->
+    </div>
+</section>
+<!--End Our Attorneys Area-->
+
+
+<!--Start Testimonial Area-->
+<section id="testimonial-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+                <div class="testimonial-list">
+                    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+
+                        @foreach($saids as $said)
+                            <!--Start Testimonial Single Item-->
+                            <div class="item 
+                            	@if($said->id == $firstSaidId)
+                            		active
+                            	@endif
+                            ">
+                                <div class="single-testimonial-item text-center">
+                                    <div class="testimonial-image-holder">
+                                        <img src="{{$said->image}}" alt="">
+                                    </div>
+                                    <p class="font-type">"{{unserialize($said->desc)[LaravelLocalization::getCurrentLocale()]}}"</p>
+
+                                    <div class="testimonial-author">
+                                        <h4 class="font-type">-{{unserialize($said->name)[LaravelLocalization::getCurrentLocale()]}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Testimonial Single Item-->
+                        @endforeach
+                            <a class="left testimonial-control" href="#testimonial-carousel" role="button"
+                               data-slide="prev"><i class="fa fa-long-arrow-left testimonial-ctl-button"></i></a>
+                            <a class="right testimonial-control" href="#testimonial-carousel" role="button"
+                               data-slide="next"><i class="fa fa-long-arrow-right testimonial-ctl-button"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Testimonial Area-->
+
+<!-- #clients -->
+
+<section id="clients" style="margin-top: -60px !important;
+    margin-bottom: 40px !important;">
+    <div class="container">
         <div class="row">
             <div class="lawyer-info">
                 <!--Start Single lawyer info-->
@@ -270,91 +324,6 @@
                 </div>
                 <!--End Single lawyer info-->
 
-            </div>
-        </div>
-        <!--Start Lawyer Info-->
-    </div>
-</section>
-<!--End Our Attorneys Area-->
-
-
-<!--Start Testimonial Area-->
-<section id="testimonial-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-                <div class="testimonial-list">
-                    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-
-                        @foreach($saids as $said)
-                            <!--Start Testimonial Single Item-->
-                            <div class="item 
-                            	@if($said->id == $firstSaidId)
-                            		active
-                            	@endif
-                            ">
-                                <div class="single-testimonial-item text-center">
-                                    <div class="testimonial-image-holder">
-                                        <img src="{{$said->image}}" alt="">
-                                    </div>
-                                    <p class="font-type">"{{unserialize($said->desc)[LaravelLocalization::getCurrentLocale()]}}"</p>
-
-                                    <div class="testimonial-author">
-                                        <h4 class="font-type">-{{unserialize($said->name)[LaravelLocalization::getCurrentLocale()]}}</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Testimonial Single Item-->
-                        @endforeach
-                            <a class="left testimonial-control" href="#testimonial-carousel" role="button"
-                               data-slide="prev"><i class="fa fa-long-arrow-left testimonial-ctl-button"></i></a>
-                            <a class="right testimonial-control" href="#testimonial-carousel" role="button"
-                               data-slide="next"><i class="fa fa-long-arrow-right testimonial-ctl-button"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End Testimonial Area-->
-
-<!-- #clients -->
-<section id="clients" dir="ltr">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12">
-                <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <img src="img/clients/client-1.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-2.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-3.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-4.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-5.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-2.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-3.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-4.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="img/clients/client-5.png" alt="">
-                    </div>
-
-                </div>
             </div>
         </div>
     </div>

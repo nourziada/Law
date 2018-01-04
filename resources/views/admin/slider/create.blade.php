@@ -67,6 +67,21 @@
                             </div>
 
 
+                             <div class="form-group">
+                                <label for="input0" class="col-sm-2 control-label bring_right left_text">Slide Title(French)</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input0" name="title[fr]" placeholder="Enter Slide Title here in French " required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input2" class="col-sm-2 control-label bring_right left_text">Slide Description(French)</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input2" name="desc[fr]" placeholder="Enter Slide Description here in French" required>
+                                </div>
+                            </div>
+
+
                             <div class="form-group">
                                 <div class="col-sm-12 left_text">
                                     <button type="submit" class="btn btn-success">إضافة الشريحة</button>

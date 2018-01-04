@@ -12,11 +12,13 @@
     <!--fonts-->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
     <!-- Main stylesheet -->
+
     <link rel="stylesheet" href="{{url('/')}}/css/bootstrap-{{LaravelLocalization::getCurrentLocaleDirection()}}.min.css">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Responsive stylesheet -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     <!--costume css-->
+
     <link rel="stylesheet" href="{{url('/')}}/css/costum_{{LaravelLocalization::getCurrentLocale()}}.css">
     <link rel="stylesheet" href="{{asset('css/space.css')}}">
     <!--[if IE]>
@@ -25,7 +27,6 @@
 <body dir="{{LaravelLocalization::getCurrentLocaleDirection()}}">
 <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
         href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
-
 
 <!-- menu  -->
 <header class="stricky anim-5-all">
@@ -53,24 +54,23 @@
                     <li><a href="{{route('show.agents')}}">{{trans('main.clients')}}</a></li>
                     <li><a href="{{route('show.contact')}}">{{trans('main.contactUs')}}</a></li>
 
-                    <li>
-                    @if(LaravelLocalization::getCurrentLocaleName() == 'Arabic')
-                    <a href="{{LaravelLocalization::getLocalizedUrl('en')}}">
-                        
-                            EN
-                        
-                    </a>
-                    @endif
 
-                    @if(LaravelLocalization::getCurrentLocaleName() == 'English')
-                    <a href="{{LaravelLocalization::getLocalizedUrl('ar')}}">
-                        
-                            عربي
-                        
-                    </a>
-                    @endif
+                     <li class="dropdown">
+                        <a href="#">{{LaravelLocalization::getCurrentLocaleName()}}</a>
+                        <ul class="submenu">
 
+                            @foreach(LaravelLocalization::getSupportedLocales() as $key => $value)
+
+                            <li><a href="{{LaravelLocalization::getLocalizedUrl($key)}}"> {{$value['native']}}</a></li>
+
+                            @endforeach
+                             
+                        </ul>
                     </li>
+
+
+
+                    
                 </ul>
             </div>
             <div class="nav-expander">

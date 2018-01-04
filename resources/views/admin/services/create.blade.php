@@ -97,6 +97,23 @@
                             </div>
 
 
+
+                            <div class="form-group">
+                                <label for="input0" class="col-sm-2 control-label bring_right left_text">Service Title(French)</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input0" name="title[fr]" placeholder="Enter Service Title here in French " required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input2" class="col-sm-2 control-label bring_right left_text">Service Description(French)</label>
+                                <div class="col-sm-10">
+
+                                    <textarea class="form-control" rows="8" id="input1" placeholder="Enter Service Description here in French" name="desc[fr]" required></textarea>
+                                </div>
+                            </div>
+
+
                             <div class="form-group">
                                 <div class="col-sm-12 left_text">
                                     <button type="submit" class="btn btn-success">إضافة الخدمة</button>
